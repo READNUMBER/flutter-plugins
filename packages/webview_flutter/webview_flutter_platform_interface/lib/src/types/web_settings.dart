@@ -3,7 +3,7 @@
 // found in the LICENSE file.
 
 import 'package:flutter/widgets.dart';
-
+import 'package:flutter/foundation.dart';
 import 'javascript_mode.dart';
 
 /// A single setting for configuring a WebViewPlatform which may be absent.
@@ -62,7 +62,7 @@ class WebSetting<T> {
   }
 
   @override
-  int get hashCode => hashValues(_value, isPresent);
+  int get hashCode => Object.hash(_value, isPresent);
 }
 
 /// Settings for configuring a WebViewPlatform.
